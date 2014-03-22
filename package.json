@@ -1,0 +1,24 @@
+{
+  "name": "do-api",
+  "version": "0.0.1",
+  "description": "An API for drupal.org built with scrapdo and express.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:arshad/do-api"
+  },
+  "keywords": [
+    "drupal",
+    "scrapdo",
+    "api"
+  ],
+  "author": "Arshad Chummun <arshad@chummun.com> (http://arshad.github.io/)",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/arshad/do-api/issues"
+  },
+  "homepage": "https://github.com/arshad/do-api"
+}
