@@ -6,6 +6,11 @@ var app = express();
 var project = require('./lib/project');
 var user = require('./lib/user');
 
+// Show a front page.
+app.get('/', function(req, res) {
+  res.send('Nothing to see here. See the README at http://github.com/arshad/do-api.');
+});
+
 // Get a project by name parameter.
 app.get('/api/project/:name', function(req, res) {
   var name = req.param('name');
