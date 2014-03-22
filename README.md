@@ -21,6 +21,10 @@ Get info for a user:
 Get projects for a user:
 
     /api/user/projects/:username
+
+Get commit count for a user:
+
+    /api/user/commits/count/:username
     
 License
 --------------
