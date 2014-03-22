@@ -39,4 +39,18 @@ app.get('/api/user/:username', function(req, res) {
   });
 });
 
+// Get a user's projects by username parameter.
+app.get('/api/user/projects/:username', function(req, res) {
+  var username = req.param('username');
+
+  user.getProjects(username, function(data) {
+    // 404 if not user not found.
+    if (data == '404') {
+      res.send('User not found', 404);
+    }
+
+    res.json(data);
+  });
+});
+
 app.listen(3000);
