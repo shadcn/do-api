@@ -4,6 +4,7 @@ var app = express();
 
 // Resources.
 var project = require('./lib/project');
+var user = require('./lib/user');
 
 // Get a project by name parameter.
 app.get('/api/project/:name', function(req, res) {
@@ -18,6 +19,20 @@ app.get('/api/project/:name', function(req, res) {
     // 404 if not project found.
     if (data == '404') {
       res.send('Project not found.', 404);
+    }
+
+    res.json(data);
+  });
+});
+
+// Get a user by username parameter.
+app.get('/api/user/:username', function(req, res) {
+  var username = req.param('username');
+
+  user.get(username, function(data) {
+    // 404 if not user not found.
+    if (data == '404') {
+      res.send('User not found', 404);
     }
 
     res.json(data);
